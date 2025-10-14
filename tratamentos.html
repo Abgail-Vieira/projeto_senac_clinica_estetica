@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Clínica Revitalize</title>
+</head>
+<body>
+    <header>
+        <h1>Clínica Revitalize</h1>
+        <p>Transforme sua beleza, preserve sua essência.</p>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">Revitalize</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="tratamentos.html">Tratamentos</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="profissionais.html">Profissionais</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="pacotes.html">Pacotes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="localizacao.html">Localização</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="agendamentos.html">Agendamento</a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+        
+
+</header>
+  [ <main class="container my-5">
+        <h2 class="text-center mb-4">Nossos Tratamentos em Destaque</h2>
+        
+        <section class="tratamentos-gallery">
+            <div class="tratamento-item">
+                <img src="imagens/tratamento1.jpg" alt="Tratamento Facial" class="img-fluid">
+                <p>Limpeza de Pele Profunda</p>
+                <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#modalTratamento1">
+                    Ver Detalhes
+                </button>
+            </div>
+            <div class="tratamento-item">
+                <img src="imagens/tratamento 3.png" alt="Massagem Corporal" class="img-fluid">
+                <p>Massagem Relaxante</p>
+                <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#modalTratamento2">
+                    Ver Detalhes
+                </button>
+            </div>
+            <div class="tratamento-item">
+                <img src="imagens/tratamento 2.png" alt="Depilação a Laser" class="img-fluid">
+                <p>Depilação a Laser</p>
+                <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#modalTratamento3">
+                    Ver Detalhes
+                </button>
+            </div>
+        </section>
+
+        <div class="modal fade" id="modalTratamento1" tabindex="-1" aria-labelledby="modalTratamento1Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTratamento1Label">Limpeza de Pele Profunda</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Remova impurezas e células mortas para uma pele radiante e saudável.</p>
+                        <img src="imagens/tratamento1.jpg" class="img-fluid mb-3" alt="Tratamento Facial">
+                        <p>Duração: 60 minutos</p>
+                        <p>Essencial para remover impurezas, cravos e células mortas, preparando a pele para absorver melhor os nutrientes.</p>
+                        <p>Benefícios: Desobstrução dos poros, melhora da textura e luminosidade da pele.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        <a href="agendamentos.html" class="btn btn-light">Agendar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modalTratamento2" tabindex="-1" aria-labelledby="modalTratamento2Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTratamento2Label">Massagens Terapêuticas e Modeladoras:</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Alivie o estresse e as tensões musculares com nossa massagem relaxante.</p>
+                        <img src="imagens/tratamento 3.png" class="img-fluid mb-3" alt="Massagem Corporal">
+                        <p>Duração: 50 minutos</p>
+                        <p>Técnicas manuais que auxiliam na redução de medidas, combate à celulite, alívio de tensões e melhora da circulação.</p>
+                        <p>Benefícios: Redução do estresse, melhora da circulação, bem-estar geral.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        <a href="agendamentos.html" class="btn btn-light">Agendar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modalTratamento3" tabindex="-1" aria-labelledby="modalTratamento3Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTratamento3Label">Depilação a Laser</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Livre-se dos pelos indesejados de forma duradoura e confortável.</p>
+                        <img src="imagens/tratamento 2.png" class="img-fluid mb-3" alt="Depilação a Laser">
+                        <p>Sessões: Variável por área</p>
+                        <p> Solução eficaz e duradoura para eliminar pelos indesejados, proporcionando uma pele mais lisa e macia.</p>
+                        <p>Benefícios: Pele lisa, redução de pelos encravados, praticidade.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        <a href="agendamentos.html" class="btn btn-light">Agendar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>]
+        </div>
+         <div class="botao">
+      <a href="agendamentos.html"><button>Agendar Avaliação Personalizada</button></a>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

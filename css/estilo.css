@@ -1,0 +1,482 @@
+@charset "UTF-8";
+
+/* ================================================= */
+/* 1. RESET / ESTILOS GLOBAIS                          */
+/* ================================================= */
+
+/* Reset Básico (seu seletor *) */
+* {
+    /* Box Model */
+    margin: 0;
+    padding: 0;
+    /* Tipografia */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estilos de corpo da página (consolidados) */
+body {
+    /* Visual */
+    background-color: #f8f9fa; /* Cor de fundo suave */
+    color: #333;
+    /* Tipografia */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Container de Conteúdo */
+.container {
+    /* Box Model */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Títulos h2 */
+h2 {
+    /* Tipografia */
+    color: #b173a3;
+    font-size: 2.2em;
+    font-weight: 600;
+    /* Box Model */
+    margin-bottom: 30px;
+}
+
+/* Seletor genérico para centralizar texto */
+.text-center {
+    /* Tipografia */
+    color: #b173a3;
+    /* Box Model */
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+/* ================================================= */
+/* 2. LAYOUT PRINCIPAL (HEADER, MAIN, FOOTER)      */
+/* ================================================= */
+
+/* HEADER (consolidado) */
+header {
+    /* Box Model */
+    margin: 10px; /* Mantido o original para o elemento sem a classe container */
+    padding: 10px; /* Mantido o original para o elemento sem a classe container */
+    padding: 20px 0; /* Mantido o do segundo bloco, se o elemento estiver dentro de .container */
+    border-bottom: 1px solid #e0e0e0;
+    /* Visual */
+    background: linear-gradient(to right, #e6a9d1, #b598d1); /* Gradiente original */
+    background-color: #f0f8ff; /* Fundo backup do segundo bloco (Será sobreposto pelo gradiente se estiver lá) */
+    color: #333;
+    /* Tipografia */
+    text-align: center;
+}
+
+header h1 {
+    /* Tipografia */
+    color: #b173a3;
+    text-align: center;
+    /* Box Model */
+    margin-bottom: 5px;
+}
+
+header p {
+    /* Tipografia */
+    color: #555;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+/* MAIN (consolidado) */
+main {
+    /* Box Model */
+    margin: -10px 10px 30px; /* Margem do bloco original */
+    padding: 10px; /* Padding do bloco original */
+    padding: 40px 0; /* Padding do segundo bloco (Será aplicado se o seletor for mais específico ou vier depois) */
+    
+    /* Visual */
+     /* Cor do bloco original */
+}
+
+/* Conteúdo dentro do MAIN */
+main .content {
+    /* Box Model */
+    width: 800px;
+    height: 600px;
+    margin: auto;
+    /* Tipografia */
+    font-size: 1.2rem;
+    text-align: justify; /* O 'text-align: right' foi ignorado, pois o justify veio depois */
+}
+
+/* Bloco específico de localização dentro do MAIN (ID e Classe) */
+main #localizacao {
+    text-align: center;
+}
+
+main .localizacao {
+    /* Layout */
+    display: flex;
+    align-items: center;
+    /* Box Model */
+    width: 50%;
+    height: 50%;
+}
+
+/* FOOTER (consolidado) */
+footer {
+    /* Box Model */
+    margin: -60px 10px 0px; /* Margem do bloco original */
+    padding: -50px; /* Padding do bloco original */
+    padding: 20px 0; /* Padding do segundo bloco (Será aplicado se for mais específico) */
+    
+    /* Visual */
+   
+    color: #555;
+    /* Tipografia */
+    text-align: center;
+}
+
+footer p {
+    /* Box Model */
+    margin-bottom: 0;
+    /* Tipografia */
+    font-size: 0.9em;
+}
+
+footer a {
+    /* Tipografia */
+    color: #007bff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* ================================================= */
+/* 3. COMPONENTES (NAVBAR, BOTÕES, GALERIA, SOCIAL) */
+/* ================================================= */
+
+/* NAVBAR */
+.navbar {
+    /* Visual */
+    background-color: #fff !important;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.navbar-brand {
+    /* Tipografia */
+    color: #b173a3 !important;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    /* Tipografia */
+    color: #555 !important;
+    font-weight: 500;
+    /* Outros */
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #b173a3 !important;
+}
+
+/* GALERIA DE TRATAMENTOS */
+.tratamentos-gallery {
+    /* Layout */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Box Model */
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.tratamento-item {
+    /* Layout */
+    flex: 1;
+    min-width: 280px;
+    max-width: 32%;
+    /* Box Model */
+    padding: 20px;
+    border-radius: 8px;
+    /* Visual */
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    /* Tipografia */
+    text-align: center;
+    /* Outros */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tratamento-item:hover {
+    /* Outros */
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+.tratamento-item img {
+    /* Box Model */
+    width: 100%;
+    height: 200px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    /* Visual */
+    object-fit: cover;
+    display: block;
+}
+
+.tratamento-item p {
+    /* Tipografia */
+    color: #333;
+    font-size: 1.1em;
+    font-weight: 600;
+    /* Box Model */
+    margin-bottom: 15px;
+}
+
+/* LOCALIZAÇÃO (IMAGEM E MAPA) */
+.location-content {
+    /* Layout */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    /* Box Model */
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.location-image,
+.location-map {
+    /* Layout */
+    flex: 1;
+    /* Box Model */
+    min-width: 300px;
+    max-width: 48%;
+}
+
+.location-image img {
+    /* Box Model */
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.location-map iframe {
+    /* Visual */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.location-map p {
+    /* Tipografia */
+    color: #666;
+    font-size: 0.95em;
+    /* Box Model */
+    margin-bottom: 5px;
+}
+
+/* BOTÃO DE AÇÃO (CTA) */
+.botao {
+    /* Box Model */
+    margin: 40px;
+    /* Tipografia */
+    text-align: center;
+}
+
+.botao a {
+    /* Tipografia */
+    text-decoration: none;
+}
+
+.botao button {
+    /* Box Model */
+    padding: 18px 40px;
+    border: none;
+    border-radius: 10px;
+    /* Visual */
+    background: linear-gradient(to right, #e6a9d1, #b598d1);
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Tipografia */
+    font-size: 1.2em;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    /* Outros */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.botao button:hover {
+    /* Visual */
+    background-color: #0097A7;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    /* Outros */
+    transform: translateY(-2px);
+}
+
+.botao button:active {
+    /* Visual */
+    background-color: #00838F;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    /* Outros */
+    transform: translateY(0);
+}
+
+/* ÍCONES SOCIAIS (Botões Arredondados) */
+.rounded-social-buttons {
+    text-align: center;
+}
+
+.rounded-social-buttons .social-button {
+    /* Layout */
+    display: inline-block;
+    position: relative;
+    /* Box Model */
+    width: 3.125rem;
+    height: 3.125rem;
+    padding: 0;
+    margin-right: 0.25rem;
+    margin-bottom: 0.25rem;
+    border: 0.125rem solid transparent;
+    border-radius: 1.6875rem;
+    /* Visual */
+    color: #fefefe;
+    /* Tipografia */
+    font-size: 1.5625rem;
+    font-weight: normal;
+    line-height: 2em;
+    text-decoration: none;
+    text-align: center;
+    /* Outros */
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.rounded-social-buttons .social-button:hover,
+.rounded-social-buttons .social-button:focus {
+    transform: rotate(360deg);
+}
+
+.rounded-social-buttons .social-button.facebook {
+    background: #3b5998;
+}
+
+.rounded-social-buttons .social-button.facebook:before {
+    font-family: "FontAwesome";
+    content: "";
+}
+
+.rounded-social-buttons .social-button.facebook:hover,
+.rounded-social-buttons .social-button.facebook:focus {
+    background: #fefefe;
+    color: #3b5998;
+    border-color: #3b5998;
+}
+
+.rounded-social-buttons .social-button.twitter {
+    background: #55acee;
+}
+
+.rounded-social-buttons .social-button.twitter:before {
+    font-family: "FontAwesome";
+    content: "";
+}
+
+.rounded-social-buttons .social-button.twitter:hover,
+.rounded-social-buttons .social-button.twitter:focus {
+    background: #fefefe;
+    color: #55acee;
+    border-color: #55acee;
+}
+
+.rounded-social-buttons .social-button.youtube {
+    background: #bb0000;
+}
+
+.rounded-social-buttons .social-button.youtube:before {
+    font-family: "FontAwesome";
+    content: "";
+}
+
+.rounded-social-buttons .social-button.youtube:hover,
+.rounded-social-buttons .social-button.youtube:focus {
+    background: #fefefe;
+    color: #bb0000;
+    border-color: #bb0000;
+}
+
+.rounded-social-buttons .social-button.instagram {
+    background: #125688;
+}
+
+.rounded-social-buttons .social-button.instagram:before {
+    font-family: "FontAwesome";
+    content: "";
+}
+
+.rounded-social-buttons .social-button.instagram:hover,
+.rounded-social-buttons .social-button.instagram:focus {
+    background: #fefefe;
+    color: #125688;
+    border-color: #125688;
+}
+
+/* Ícones sociais do footer (alternativa/repetição) */
+.social-icons a {
+    /* Visual */
+    color: #007bff;
+    /* Box Model */
+    margin: 0 10px;
+    /* Tipografia */
+    font-size: 1.8em;
+    /* Outros */
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #0056b3;
+}
+
+/* Imagem dentro do container text-center (Estrutura incomum, mantida) */
+.container.text-center > img {
+    /* Box Model */
+    width: 50px;
+    height: 50px;
+    /* Tipografia (sem efeito na imagem) */
+    text-align: justify;
+}
+
+/* ================================================= */
+/* 4. RESPONSIVIDADE (@MEDIA QUERIES)                */
+/* ================================================= */
+
+@media (max-width: 992px) {
+    .tratamento-item {
+        /* Layout */
+        max-width: 48%; /* 2 itens por linha */
+    }
+}
+
+@media (max-width: 768px) {
+    .tratamento-item {
+        /* Layout */
+        max-width: 90%; /* 1 item por linha */
+    }
+
+    .location-content {
+        /* Layout */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .location-image,
+    .location-map {
+        /* Box Model */
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+}
