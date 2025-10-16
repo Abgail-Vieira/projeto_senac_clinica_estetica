@@ -34,11 +34,7 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="agendamentos.html">Agendamento</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="formulario.html">Formulario</a>
-        </li>
-        
+        </li>       
       </ul>
     </div>
   </div>
@@ -73,23 +69,11 @@
   </div>
   <div class="col-md-4">
     <label for="estado" class="form-label">Estado</label>
-    <select id="uf" class="form-select" disabled >
-      <option selected>Escolha...</option>
-      <optgroup value="Sudeste" label="Sudeste">
-          <option value="RJ">Rio de Janeiro</option>
-          <option value="SP">São Paulo</option>
-          <option value="ES"> Espírito Santo</option>
-          <option value="MG"> Minas Gerais</option>
-      </group>
-       <optgroup value="Sul" label="Sul">
-          <option value="RS">Rio Grande do Sul</option>
-          <option value="SC">Santa Catarina</option>
-      </group>
-    </select>
+   <input type="text"  class="form-control" name="uf" id="uf" disabled>
   </div>
   <div class="col-md-2">
     <label for="inputZip" class="form-label">CEP</label>
-    <input type="text" class="form-control" id="cep"  onblur="pesquisacep(this.value);">
+    <input type="text" class="form-control" id="cep" name="cep" onblur="pesquisacep(this.value)">
   </div>
   <div class="col-12">
     <div class="form-check">
